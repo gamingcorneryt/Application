@@ -1,0 +1,58 @@
+<!-- /PlancksConstant.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Planck Lock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="center">
+    <div class="planck" id="planckLock">
+      <div class="readout" aria-live="polite">
+        <span class="readout-int">6</span>
+        <span class="readout-dot">.</span>
+        <span class="readout-dec" id="readoutDec">000</span>
+      </div>
+
+      <div class="wheels" role="group" aria-label="Set decimal digits to unlock">
+        <!-- fixed 6 -->
+        <div class="wheel fixed" aria-label="Fixed digit 6">
+          <button class="arrow" disabled aria-hidden="true" tabindex="-1">▲</button>
+          <div class="digit" aria-hidden="true">6</div>
+          <button class="arrow" disabled aria-hidden="true" tabindex="-1">▼</button>
+        </div>
+
+        <div class="dot" aria-hidden="true">.</div>
+
+        <!-- tenths -->
+        <div class="wheel" data-index="0" aria-label="Tenths">
+          <button class="arrow up" aria-label="Increment tenths">▲</button>
+          <div class="digit" aria-live="off">0</div>
+          <button class="arrow down" aria-label="Decrement tenths">▼</button>
+        </div>
+
+        <!-- hundredths -->
+        <div class="wheel" data-index="1" aria-label="Hundredths">
+          <button class="arrow up" aria-label="Increment hundredths">▲</button>
+          <div class="digit" aria-live="off">0</div>
+          <button class="arrow down" aria-label="Decrement hundredths">▼</button>
+        </div>
+
+        <!-- thousandths -->
+        <div class="wheel" data-index="2" aria-label="Thousandths">
+          <button class="arrow up" aria-label="Increment thousandths">▲</button>
+          <div class="digit" aria-live="off">0</div>
+          <button class="arrow down" aria-label="Decrement thousandths">▼</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="label">Quantize the value. Align the digits.</div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
